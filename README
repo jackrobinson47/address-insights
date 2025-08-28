@@ -1,0 +1,21 @@
+Address Insights Map App
+Visualize a location on a map, calculate walking/driving scores, and view nearby points of interest.
+
+Built:
+App.tsx logic, formatting, and most CSS. API function logic (utils).
+
+Assisted:
+Leaflet formatting (never heard of it till today). API function specifics like JSON formatting. Other various little syntax problems.
+More specifically: leaflet animations, icons, and elements. A.I. saved me time by not needing to research official documentation.
+
+Approach:
+Knock out each requirement one by one. Keep elements and functions pretty barebones for easy adjustments and fixes.
+Install TS for strict typing. App was built in one day over periodic spans. 4 hours max.
+
+Design Choices:
+Made the querying feel 'dynamic' by rooting a useState with the searchbar label. The function is called immediately
+and the inferred address feels responsive. Scores are simple and color coded. History items can auto-fill search field.
+
+- Jack Patrick Robinson 8/28/2025
+www.linkedin.com/in/jack-robinson-965b9633b
+jackprobi47@gmail.com
