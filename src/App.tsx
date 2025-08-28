@@ -209,7 +209,7 @@ function App() {
                     <div className="map-input-row">
                         <input
                             className="map-label text-regular"
-                            placeholder=" * Enter Address"
+                            placeholder=" * Enter Location"
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
                         />
