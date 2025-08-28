@@ -105,7 +105,7 @@ function App() {
                     <header className="text-bold">Address Insights</header>
 
                     {!address && (
-                        <p className="text-regular">* Please enter an Address to calculate score.</p>
+                        <p className="text-regular">* Please enter a Location to calculate score.</p>
                     )}
 
                     {/* Loading or Scores */}
