@@ -1,6 +1,6 @@
 import { Amenity } from "./fetchAmenities";
 
-export const calculateScores = (points: Amenity[], drivingRadius: number = 3000) => {
+export const calculateScores = (points: Amenity[], drivingRadius: number) => {
     // Separate points into walkable vs. drivable
     const walkablePoints = points.filter(p => p.walking);
     const drivablePoints = points.filter(p => !p.walking);
@@ -30,12 +30,12 @@ export const calculateScores = (points: Amenity[], drivingRadius: number = 3000)
 
     /**
      * Urban/Suburban/Rural classification:
-     * - Urban: > 30 amenities per km squared.
-     * - Suburban: 2–25 amenities per km squared.
+     * - Urban: > 20 amenities per km squared.
+     * - Suburban: 2–14 amenities per km squared.
      * - Rural: < 1 amenities per km squared.
      */
     let urbanSuburbanIndex = "Suburban";
-    if (density > 25) urbanSuburbanIndex = "Urban";
+    if (density > 15) urbanSuburbanIndex = "Urban";
     else if (density < 1) urbanSuburbanIndex = "Rural";
 
     return { walkingScore, drivingScore, urbanSuburbanIndex };

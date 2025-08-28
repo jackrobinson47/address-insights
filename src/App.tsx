@@ -60,7 +60,7 @@ function App() {
             const nearbyPoints = await fetchNearbyAmenitiesAndBusinesses(geoLocation.lat, geoLocation.lng, 500);
             setPoints(nearbyPoints);
 
-            const newScores = calculateScores(nearbyPoints);
+            const newScores = calculateScores(nearbyPoints, 2000);
             setScores(newScores);
             setLoading(false);
         };
