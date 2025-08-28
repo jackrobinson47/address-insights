@@ -32,11 +32,11 @@ export const calculateScores = (points: Amenity[], drivingRadius: number = 3000)
      * Urban/Suburban/Rural classification:
      * - Urban: > 30 amenities per km squared.
      * - Suburban: 2–25 amenities per km squared.
-     * - Rural: < 2 amenities per km squared.
+     * - Rural: < 1 amenities per km squared.
      */
     let urbanSuburbanIndex = "Suburban";
     if (density > 25) urbanSuburbanIndex = "Urban";
-    else if (density < 2) urbanSuburbanIndex = "Rural";
+    else if (density < 1) urbanSuburbanIndex = "Rural";
 
     return { walkingScore, drivingScore, urbanSuburbanIndex };
 };

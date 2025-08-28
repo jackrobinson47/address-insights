@@ -68,7 +68,7 @@ const MapElement: React.FC<MapViewProps> = ({ lat, lng, label, points, walkingRa
                         const markers = cluster.getAllChildMarkers();
                         const allWalking = markers.every((m: any) => m.options.walking);
                         const allDriving = markers.every((m: any) => !m.options.walking);
-                        const color = allWalking ? "green" : allDriving ? "gray" : "blue";
+                        const color = allWalking ? "green" : allDriving ? "gray" : "green";
 
                         return L.divIcon({
                             html: `<div style="background:${color};width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;">${cluster.getChildCount()}</div>`,
